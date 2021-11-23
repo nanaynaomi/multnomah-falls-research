@@ -1,0 +1,132 @@
+html {
+	-webkit-font-smoothing: antialiased;
+}
+   
+body {
+    background: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+/*====================================
+	MAIN
+====================================*/
+
+section {
+    position: relative;
+    padding: 100px 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+#content {
+	padding: 0;
+}
+
+#content h1 {
+	color: #ffffff;
+    padding-bottom: 30px;
+}
+
+.banner .caption {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    background-color: rgba(20,20,20,0.2);
+    height: 100%;
+    color: #000;
+    cursor: e-resize;
+    padding: 4em 0 0 2em;
+}
+
+.banner .caption.caption-alt {
+    text-align: center;
+}
+
+.banner .item {
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-attachment: local;
+	background-size: cover;
+	height: 650px;
+}
+
+.banner .item.page-alt {
+	height: 300px;
+}
+
+.banner .item-first {
+	background-image: url(../images/johnny-mcclung-uYTKzVp8loQ-unsplash.jpg);
+}
+
+
+/*====================================
+	LINKS 
+====================================*/
+a {
+    color: rgba(255, 255, 255, 0.9);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    text-decoration: none !important;
+}
+
+
+.btn-primary {
+    background-color: #284a28;
+    border-color: #0d2b0d;
+    color: rgba(255, 255, 255, 0.9);
+    width: 180px;
+}
+     
+a:hover, a:active, a:focus, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #cfd6cf;
+    color: #0a200a;
+    border-color: #113611;
+}
+
+/*====================================
+	NAVIGATION
+====================================*/
+.main-nav {
+    border: none;
+    margin-bottom: 0;
+    padding: 10px 0;
+    background-color: #0d2b0d;
+}
+
+.main-nav .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-nav img {
+    width: 80%;
+}
+
+.main-nav .nav li a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    padding-right: 22px;
+    padding-left: 22px;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.main-nav .nav {
+    margin-left: 60%;
+}
+
+.navbar-header {
+    width: 10%;
+}
+
+
+/*====================================
+	
+====================================*/
+
