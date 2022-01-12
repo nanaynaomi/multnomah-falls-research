@@ -1,10 +1,17 @@
 html {
 	-webkit-font-smoothing: antialiased;
 }
-   
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url("../fonts/RobotoCondensed-Light.ttf") format("opentype");
+}
+
+/* DON'T FORGET TO ADD FONT LICENSE LATER!!!!!!*/
+
 body {
     background: #ffffff;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Roboto Condensed', serif;
     overflow-x: hidden;
 }
 
@@ -78,7 +85,7 @@ section {
 
 /* Color Theme */
 .btn-primary, .main-nav {
-    background-color: #604471;/*transparent/*#E6DAA6/*#CEDAD8;#0d2b0d;*/
+    background-color: #604471;
     border-color: #532a6d;
 }
 a, .btn-primary, .main-nav {
@@ -110,11 +117,14 @@ a {
     width: 180px;
 }
      
-a:hover, a:active, a:focus, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
     background-color: #cfd6cf;
     color: #0a200a;
     border-color: #113611;
 }
+
+
+
 
 /*====================================
 	NAVIGATION
@@ -122,39 +132,141 @@ a:hover, a:active, a:focus, .btn-primary:hover, .btn-primary:active, .btn-primar
 .main-nav {
     border: none;
     margin-bottom: 0;
-    padding: 10px 0;
+    padding: 0px;
 }
 
-.main-nav .navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
+.navbar-brand {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+  
+.img-responsive {
+    position: relative;
 }
 
-.main-nav img {
-    width: 80%;
+.main-nav .navbar-brand span {
+    color: #fff;
+}
+
+.nav-collapse {
+    background: #604471;
+}
+
+.main-nav .navbar-nav.nav-first {
+    margin-left: 8em;
+}
+
+.main-nav .navbar-nav.navbar-right li a {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.main-nav .navbar-nav.navbar-right .button {
+    display: inline-block;
+    margin: 0.2em 0 0 1em;
+}
+
+
+.main-nav .navbar-nav.navbar-first .button a {
+    padding: 10px 25px;
 }
 
 .main-nav .nav li a {
     font-size: 16px;
     font-weight: bold;
-    /*color: #fff;*/ /*#b4d2c6*/
-    text-transform: uppercase;
+    color: #fff;
     padding-right: 22px;
     padding-left: 22px;
-    margin-top: 15%;
-    margin-bottom: 10%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-transform: uppercase;
 }
 
-.main-nav .nav {
-    margin-left: 60%;
+.main-nav .nav li a:hover {
+    background:#604471;
+    color: #c061bb;
 }
 
-.navbar-header {
-    width: 10%;
+.main-nav a:hover {
+    background: #604471;
+    color: #c061bb;
 }
 
+.main-nav .navbar-nav > li > a:hover,
+.main-nav .navbar-nav > li > a:focus {
+    background-color: transparent;
+}
+
+.main-nav .nav li.active > a {
+    background-color: transparent;
+    color: #c061bb;
+}
+
+.main-nav .navbar-toggle {
+    border: none;
+    padding-top: 10px;
+}
+
+.main-nav .fa {
+  font-size: 20px;
+}
 
 /*====================================
-	
+	RESPONSIVE NAVIGATION
 ====================================*/
+@media screen and (max-width: 1170px) {
+ 	.main-nav .navbar-nav.nav-first {
+		margin-left: inherit;
+    }
+}
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main-nav .nav li a {
+      	padding-right: 10px;
+      	padding-left: 10px;
+    }
+}
+
+@media(min-width:768px) {
+    .main-nav {
+		border-bottom: 0;
+	}
+
+    .main-nav.nav-collapse {
+		-webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+		-moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+		padding: 12px 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {  /* Phones and small tablets */
+ .main-nav {
+		-webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+		-moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+		padding: 10px 0 20px 0;
+		text-align: center;
+	}
+
+ .main-nav .nav li a {
+		line-height: normal;
+		padding: 10px;
+    }
+
+ .main-nav .navbar-nav.navbar-right li {
+      	display: inline-block;
+    }
+
+ .main-nav .navbar-nav.navbar-right .button {
+		display: block !important;
+		width: 50%;
+		margin: 10px auto 10px auto;
+		padding: 10px;
+    }
+
+ .main-nav .button a {
+      	color: #fff !important;
+    }
+}
+   
